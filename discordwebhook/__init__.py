@@ -20,8 +20,6 @@ class DiscordWebhookLogger(IPlugin):
     def __init__(self, server):
         super().__init__(server)
 
-        self.items_by_name = None
-
     async def ready(self):
         self.server.logger.info("Discord Webhook Logger Ready!")
         
