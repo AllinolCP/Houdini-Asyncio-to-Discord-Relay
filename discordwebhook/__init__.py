@@ -57,7 +57,7 @@ class DiscordWebhookLogger(IPlugin):
         embed.set_thumbnail(url=f'https://{playlink}/avatar/{penguin_id}/cp?size=120')
 
         # set footer
-        embed.set_footer(text='© {cppsname}')
+        embed.set_footer(text=f'© {cppsname}')
 
         # set timestamp (default is now)
         embed.set_timestamp()
