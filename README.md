@@ -2,8 +2,7 @@
 Relay chat from [Houdini](https://github.com/Solero/Houdini) to [Discord](https://discordapp.com).
 
 # Previews
-![](https://prnt.sc/t0gvpj)
-
+<img alt="preview" src="https://i.imgur.com/0T4AjHB.png">
 
 # Installation
 1. Run `git clone https://github.com/AllinolCP/Houdini-Asyncio-to-Discord-Relay.git` in `Houdini/Plugins`
