@@ -50,7 +50,7 @@ class DiscordWebhookLogger(IPlugin):
         embed = DiscordEmbed(title='Chat-Log', description='', color=242424)
 
         # set author
-        embed.set_author(name=f'{p.username}', url='https://{website}', icon_url=f'https://{playlink}/avatar/{penguin_id}/cp?size=120')
+        embed.set_author(name=f'{p.username}', url=f'https://{website}', icon_url=f'https://{playlink}/avatar/{penguin_id}/cp?size=120')
 
 
         # set thumbnail
