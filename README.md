@@ -1,4 +1,4 @@
-# Houdini To Discord Relay v1.2
+# Houdini To Discord Relay v1
 Relay chat from [Houdini](https://github.com/Solero/Houdini) to [Discord](https://discordapp.com).
 
 # Previews
