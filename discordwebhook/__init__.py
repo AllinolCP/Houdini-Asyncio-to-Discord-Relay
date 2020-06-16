@@ -44,7 +44,7 @@ class DiscordWebhookLogger(IPlugin):
         
     @handlers.handler(XTPacket('m', 'sm'))   
     async def chat_logger(self, p, penguin_id: int, message: str):
-        webhook = DiscordWebhook(url='chatlogwebhook')
+        webhook = DiscordWebhook(url=chatlogwebhook)
 
         # create embed object for webhook
         embed = DiscordEmbed(title='Chat-Log', description='', color=242424)
