@@ -4,6 +4,7 @@ from discord_webhook import DiscordWebhook, DiscordEmbed
 from houdini.handlers import XTPacket
 from houdini.handlers.games import determine_coins_earned, game_over_cooling
 import difflib
+import time
 chatlogwebhook = ''
 coinslogwebhook = ''
 connectionlogwebhook = ''
@@ -19,6 +20,8 @@ class DiscordWebhookLogger(IPlugin):
 
     def __init__(self, server):
         super().__init__(server)
+
+        self.items_by_name = None
 
     async def ready(self):
         self.server.logger.info("Discord Webhook Logger Ready!")
@@ -47,7 +50,7 @@ class DiscordWebhookLogger(IPlugin):
         webhook = DiscordWebhook(url=chatlogwebhook)
 
         # create embed object for webhook
-        embed = DiscordEmbed(title='Chat-Log', description='', color=242424)
+        embed = DiscordEmbed(title='Chat-Log', description='Chat logger', color=242424)
 
         # set author
         embed.set_author(name=f'{p.username}', url=f'https://{website}', icon_url=f'https://{playlink}/avatar/{penguin_id}/cp?size=120')
@@ -72,4 +75,5 @@ class DiscordWebhookLogger(IPlugin):
 
         # add embed object to webhook
         webhook.add_embed(embed)
+        time.sleep(1)
         response = webhook.execute()
